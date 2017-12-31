@@ -1,0 +1,2 @@
+class AirbnbHostPlace < ApplicationRecord
+end

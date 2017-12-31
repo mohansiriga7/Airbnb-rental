@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @airbnb_host_place.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @airbnb_host_place.address %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @airbnb_host_place.price %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @airbnb_host_place.type %>
+</p>
+
+<p>
+  <strong>No of guests:</strong>
+  <%= @airbnb_host_place.no_of_guests %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @airbnb_host_place.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @airbnb_host_place.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_airbnb_host_place_path(@airbnb_host_place) %> |
+<%= link_to 'Back', airbnb_host_places_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Airbnb Host Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Price</th>
+      <th>Type</th>
+      <th>No of guests</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @airbnb_host_places.each do |airbnb_host_place| %>
+      <tr>
+        <td><%= airbnb_host_place.name %></td>
+        <td><%= airbnb_host_place.address %></td>
+        <td><%= airbnb_host_place.price %></td>
+        <td><%= airbnb_host_place.type %></td>
+        <td><%= airbnb_host_place.no_of_guests %></td>
+        <td><%= airbnb_host_place.latitude %></td>
+        <td><%= airbnb_host_place.longitude %></td>
+        <td><%= link_to 'Show', airbnb_host_place %></td>
+        <td><%= link_to 'Edit', edit_airbnb_host_place_path(airbnb_host_place) %></td>
+        <td><%= link_to 'Destroy', airbnb_host_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Airbnb Host Place', new_airbnb_host_place_path %>
