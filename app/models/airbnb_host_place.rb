@@ -7,8 +7,7 @@ class AirbnbHostPlace < ApplicationRecord
   validates :price, presence: true
 
   def self.compare(address, long_term_rental_income)
-    #Searching entered address in AirbnbHostPlace addresses within one mile
-    airbnb_place = AirbnbHostPlace.near(address, 1).first
+    airbnb_place = find_near_location address
     message = ""
     if airbnb_place.present?
       if airbnb_place.price > long_term_rental_income
@@ -20,4 +19,10 @@ class AirbnbHostPlace < ApplicationRecord
       message = "No Airbnb Host Places found."
     end
   end
+
+  def self.find_near_location address
+    #Searching entered address in AirbnbHostPlace addresses within one mile
+    near(address, 1).first
+  end
+
 end
