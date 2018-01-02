@@ -4,7 +4,7 @@ class CreateAirbnbHostPlaces < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :address
       t.decimal :price
-      t.string :type
+      t.string :place_type
       t.integer :no_of_guests
       t.float :latitude
       t.float :longitude

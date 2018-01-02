@@ -69,6 +69,6 @@ class AirbnbHostPlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def airbnb_host_place_params
-      params.require(:airbnb_host_place).permit(:name, :address, :price, :type, :no_of_guests, :latitude, :longitude)
+      params.require(:airbnb_host_place).permit(:name, :address, :price, :place_type, :no_of_guests, :latitude, :longitude)
     end
 end

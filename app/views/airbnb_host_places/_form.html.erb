@@ -18,17 +18,17 @@
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :airbnb_host_place_address %>
+    <%= form.text_field :address, :id => 'geo-input' %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price, id: :airbnb_host_place_price %>
+    <%= form.number_field :price, id: :airbnb_host_place_price %>
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type, id: :airbnb_host_place_type %>
+    <%= form.label :place_type %>
+    <%= form.text_field :place_type, id: :airbnb_host_place_place_type %>
   </div>
 
   <div class="field">
@@ -36,15 +36,6 @@
     <%= form.number_field :no_of_guests, id: :airbnb_host_place_no_of_guests %>
   </div>
 
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude, id: :airbnb_host_place_latitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :airbnb_host_place_longitude %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
